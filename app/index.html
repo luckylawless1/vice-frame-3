@@ -1,23 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
-<link rel="stylesheet" href="./style.css">
+<title>VICE FRAME 3 — GTA-Style Cover Art Maker</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
-    <button id="export" type="button">Export PNG 1080 x 1080</button>
-    <p id="status" role="status"></p>
+<header id="topbar">
+  <div class="brand">VICE <span>FRAME</span> 3</div>
+  <p class="tag">Turn any photo into a GTA-style cover. Pick a panel, drop in a photo, grade it, export the PNG.</p>
+</header>
+<main id="editor">
+  <section id="stage-wrap">
+    <canvas id="stage" width="1080" height="1080"></canvas>
+    <p id="stage-hint">Click a panel to select it · drag to pan its photo · scroll to zoom · arrow keys nudge (Shift = bigger steps) · double-click a panel to reset its framing</p>
   </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+  <aside id="panel">
+    <section class="group">
+      <h2>Photos</h2>
+      <div id="thumbs"></div>
+      <button type="button" id="upload-btn">Upload photos</button>
+      <input type="file" id="file-input" accept="image/*" multiple hidden>
+      <p class="note">…or drag &amp; drop image files anywhere on the editor. Click a photo to put it in the selected panel.</p>
+    </section>
+    <section class="group">
+      <h2>Layout</h2>
+      <div id="layout-btns"></div>
+    </section>
+    <section class="group">
+      <h2>Panel</h2>
+      <p id="panel-label" class="note">Panel 1</p>
+      <label class="field">Grade
+        <select id="grade-select"></select>
+      </label>
+      <button type="button" id="grade-all">Apply grade to all panels</button>
+      <label class="field">Zoom
+        <input type="range" id="zoom" min="1" max="5" step="0.01" value="1">
+      </label>
+    </section>
+    <section class="group">
+      <h2>Text</h2>
+      <label class="field">Title
+        <input type="text" id="in-title" maxlength="40">
+      </label>
+      <label class="field">Tagline
+        <input type="text" id="in-tagline" maxlength="60">
+      </label>
+      <label class="field">Caption
+        <input type="text" id="in-caption" maxlength="60">
+      </label>
+    </section>
+    <section class="group">
+      <h2>Stickers &amp; finish</h2>
+      <label class="check"><input type="checkbox" id="st-palm"> Palm silhouette</label>
+      <label class="check"><input type="checkbox" id="st-star"> Star badge</label>
+      <label class="check"><input type="checkbox" id="st-burst"> “NEW!” starburst</label>
+      <label class="check"><input type="checkbox" id="st-wanted"> Wanted stars</label>
+      <label class="check"><input type="checkbox" id="st-grain"> Film grain</label>
+    </section>
+    <section class="group">
+      <h2>Export PNG</h2>
+      <div class="export-btns">
+        <button type="button" id="exp-1080x1080">1080 × 1080</button>
+        <button type="button" id="exp-1080x1350">1080 × 1350</button>
+        <button type="button" id="exp-1920x1080">1920 × 1080</button>
+        <button type="button" id="exp-all" class="wide">Export all 3 sizes</button>
+      </div>
+    </section>
+  </aside>
 </main>
-<script type="module" src="./src/main.js"></script>
+<script type="module" src="src/main.js"></script>
 </body>
 </html>
