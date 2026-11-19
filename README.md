@@ -1,8 +1,8 @@
 # VICE FRAME 3 — GTA-Style Cover Art Maker
 
-![make.fun bounty](https://make.fun/badge/gta6-cover-art-01.svg)
-![rank](https://make.fun/badge/gta6-cover-art-01/luckylawless1/vice-frame-3/rank.svg)
-![reward](https://make.fun/badge/gta6-cover-art-01/luckylawless1/vice-frame-3/reward.svg)
+[![make.fun · gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/luckylawless1/vice-frame-3/rank.svg)](https://make.fun/bounty/gta6-cover-art-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/luckylawless1/vice-frame-3/reward.svg)](https://make.fun/bounty/gta6-cover-art-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-cover-art-01)
 
 VICE FRAME 3 is an offline web app that turns any photo into GTA 6-style
 multi-panel cover art. Open it, drop in your photos, arrange them across a
